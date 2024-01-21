@@ -1,0 +1,155 @@
+/* css boiler plate */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem 0.5rem;
+	background-color: coral;
+	gap: 0.5rem;
+}
+
+.header-top {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0.5rem;
+}
+
+#logo {
+	display: flex;
+}
+
+#logo .circle {
+	width: 20px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: #000;
+	margin: 5px 0px;
+}
+
+.header-top :nth-child(2) {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.header-top button {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.header-top button:is(:hover, :focus) {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav {
+	display: grid;
+	/* place-items: center; */
+	/* width: 100%; */
+}
+
+nav menu {
+	margin-inline: auto;
+	list-style: none;
+	width: 100%;
+	display: flex;
+
+	align-items: center;
+	gap: max(1rem, 3vw);
+	padding: 0.5rem 0.5rem;
+
+	overflow-x: auto;
+}
+
+nav menu li {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+/* MAIN */
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 0.25rem;
+	gap: 1rem;
+}
+
+/* Scrollbar CSS */
+main ::-webkit-scrollbar {
+	background-color: transparent;
+	height: 0.5rem;
+}
+main ::-webkit-scrollbar-thumb {
+	background-color: orangered;
+}
+
+.slider {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	overflow-x: scroll;
+	padding: 1rem;
+}
+
+main .text-content {
+	width: 100%;
+	display: flex;
+	gap: 2rem;
+	font-family: sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-inline: 1rem;
+}
+
+main .text-content .element {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+main .text-content .element :nth-child(2) {
+	font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.gallery {
+	height: 60vh;
+}
+
+.gallery img {
+	height: 100%;
+	aspect-ratio: 3 / 4;
+}
